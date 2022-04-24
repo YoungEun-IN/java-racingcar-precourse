@@ -1,12 +1,13 @@
 package racingcar.model.Car;
 
+import racingcar.utils.Message;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.StringJoiner;
 import java.util.function.Predicate;
 
 public class Cars {
-  public static final String INPUT_ERROR_MSG = "자동차 이름을 입력하세요";
   private final List<Car> cars = new ArrayList<>();
 
   private Position lastPosition = new Position();
@@ -18,7 +19,7 @@ public class Cars {
 
   private void inputValidate(String input) {
     if (input == null || input.isEmpty()) {
-      throw new IllegalArgumentException(INPUT_ERROR_MSG);
+      throw new IllegalArgumentException(Message.ASK_CAR_NAMES);
     }
   }
 

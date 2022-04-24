@@ -1,7 +1,8 @@
 package racingcar.model;
 
+import racingcar.utils.Message;
+
 public class Round {
-  public static final String INPUT_ERROR_MSG = "[ERROR] 잘못된 입력값입니다.";
   public static final int MinNumber = 0;
   private final int round;
 
@@ -14,10 +15,10 @@ public class Round {
       round = Integer.parseInt(s);
     }
     catch (Exception e) {
-      throw new IllegalArgumentException(INPUT_ERROR_MSG);
+      throw new IllegalArgumentException(Message.NON_NUMERIC_GAME_COUNT_ERROR);
     }
     if (MinNumber >= round) {
-      throw new IllegalArgumentException(INPUT_ERROR_MSG);
+      throw new IllegalArgumentException(Message.ZERO_GAME_COUNT_ERROR);
     }
   }
 }

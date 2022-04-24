@@ -1,9 +1,10 @@
 package racingcar.model.Car;
 
+import racingcar.utils.Message;
+
 import java.util.Objects;
 
 public class Name {
-  public static final String INPUT_ERROR_MSG = "이름은 5글자 이하";
   private final String name;
 
   public Name(String carName) {
@@ -12,7 +13,7 @@ public class Name {
   }
   private void validateName(String name) throws IllegalArgumentException{
     if(name == null || name.length() >= 6){
-      throw new IllegalArgumentException(INPUT_ERROR_MSG);
+      throw new IllegalArgumentException(Message.LESS_MORE_NAME_ERROR);
     }
   }
 
