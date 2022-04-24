@@ -2,6 +2,7 @@ package racingcar.model;
 
 import racingcar.model.Car.Car;
 import racingcar.model.Car.Cars;
+import racingcar.utils.Message;
 
 import java.util.List;
 import java.util.StringJoiner;
@@ -22,6 +23,6 @@ public class Winner {
     for (Car car : winners) {
       sj.add(car.getName().toString());
     }
-    return String.format("최종 우승자 : %s", sj);
+    return Message.FINAL_WINNER + sj;
   }
 }
