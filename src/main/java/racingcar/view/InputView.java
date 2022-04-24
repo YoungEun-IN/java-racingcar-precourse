@@ -1,7 +1,7 @@
 package racingcar.view;
 
-import nextstep.utils.Console;
-import racinggame.utils.Message;
+import camp.nextstep.edu.missionutils.Console;
+import racingcar.utils.Message;
 
 import java.util.Arrays;
 import java.util.HashSet;
