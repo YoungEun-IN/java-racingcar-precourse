@@ -17,7 +17,7 @@ public class RacingGameController {
     private Cars cars;
     private Round round;
 
-    RacingGameController() {
+    public RacingGameController() {
         drivingStrategy = getDefaultDrivingStrategy();
     }
 
